@@ -3,95 +3,69 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    texto1:{
-      color: '#f8f8ff',
-      fontSize: 24,
-      padding: 30
-    },
-    texto2: {
-      color: '#fffaf0',
-      fontSize: 16,
-      padding: 30
-    },
-    texto3:{
-      color: '#f0ffff',
-      fontSize: 18,
-      textAlign: 'center',
-      letterSpacing: 2,
-      padding: 30,
-      backgroundColor: '#000000',
-    },
-
-    texto4:{
-      color: '#800000',
-      fontSize: 12,
-      textAlign: 'center',
-      letterSpacing: 2,
-    },
-
-    button: {
-      width: 300,
-      height: 42,
-      backgroundColor: '#5599ff',
-      marginTop: 10,
-      borderRadius: 5,
-      alignItems: 'center',
-      justifyContent: 'center',
-   
-    },
-
-    logo: {
-      width: 150,
-      height: 150,
-      borderRadius: 80,
-      marginBottom: 15
-    },
-
-    input:{
-      marginTop: 10,
-      padding: 10,
-      width: 300,
-      backgroundColor: '#fff',
-      fontSize: 16,
-      fontWeight: 'bold',
-      borderRadius: 3,
-    },
-
-    buttonText:{
-      fontSize: 18,
-      fontWeight: 'bold',
-      color: '#fff'
-    },
-
-    bottomText: {
-      marginTop: 20,
-      fontWeight: '500'
-    },
-
-    bottomTextClickable: {
-      marginTop: 20,
-      fontWeight: 'bold',
-      textDecorationLine: 'underline'
     },
 
     background: {
       width: '100%',
       height: '100%',
       resizeMode: 'cover',
-      position: 'absolute' //not push other components underneath it
+      position: 'absolute'
+    },
+
+    logo: {
+      width: 220,
+      height: 97,
+      marginTop: 25,
+      marginEnd: 50,
+      marginBottom: 5,
+      alignSelf: 'flex-end'
+    },
+
+    subtitle: {
+      fontSize: 16,
+      alignSelf: 'flex-end',
+      fontWeight: '600',
+      marginEnd: 50,
     },
 
     loginFieldsContainer: {
+      width: '80%',
       backgroundColor: 'rgba(200, 200, 200, 0.6)',
       justifyContent: 'center',
       alignItems: 'center',
       padding: 25,
       flexWrap:'wrap',
-      borderRadius: 20
-    }
+      alignSelf: 'center',
+      marginTop: 60,
+    },
+      
+    input:{
+      marginBottom: 40,
+      padding: 10,
+      width: 300,
+      backgroundColor: '#fff',
+      fontSize: 16,
+      fontWeight: '400',
+      borderColor: '#800000ff',
+      borderWidth: 1,
+    },
+
+    button: {
+      marginBottom: 40,
+      width: 300,
+      height: 42,
+      backgroundColor: 'black',
+      alignItems: 'center',
+      justifyContent: 'center',
+   
+    },
+
+    buttonText:{
+      fontSize: 16,
+      fontWeight: '400',
+      color: '#fff'
+    },
+   
   });
 
   //make this component available to the app

@@ -4,14 +4,19 @@ import { createDrawerNavigator } from "react-navigation-drawer";
 import { createStackNavigator } from "react-navigation-stack";
 
 import Home from "./src/components/HomeScreen";
-import Profile from "./src/components/ProfileScreen";
+import MapaAglomeracao from "./src/components/MapaAglomeracaoScreen";
 import Login from "./src/components/LoginScreen";
 import Register from "./src/components/RegisterScreen";
+import Estatisticas from "./src/components/EstatisticasScreen"
 
 const MainDrawer = createDrawerNavigator(
   {
-    Home: Home,
-    Profile: Profile,
+    'Estatísticas': {
+      screen: Estatisticas,
+      options: { title: "Not Home" }
+    },
+    'Mapa de Aglomeração': MapaAglomeracao,
+    'Denunciar Aglomeração': Home,
   },
   {
     //Prop
@@ -28,6 +33,13 @@ const MainDrawer = createDrawerNavigator(
 );
 
 const AppNavigator = createStackNavigator({
+  Drawer: {
+    screen: MainDrawer,
+    navigationOptions: {
+      headerTitleAlign: 'center',
+      headerShown: false,
+    },
+  },
   Login: {
     screen: Login,
     navigationOptions: {
@@ -37,12 +49,7 @@ const AppNavigator = createStackNavigator({
   Register: {
     screen: Register,
   },
-  Drawer: {
-    screen: MainDrawer,
-    navigationOptions: {
-      headerShown: false,
-    },
-  },
+
 });
 
 //make this component available to the app

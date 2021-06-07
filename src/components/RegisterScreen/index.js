@@ -1,29 +1,29 @@
-import 'react-native-gesture-handler';
-import React, { useState } from 'react';
-import { Text, View, Image, TextInput, TouchableOpacity, Alert, ImageBackground } from 'react-native';
-import { TextInputMask } from 'react-native-masked-text'
-import styles from './styles'
+import "react-native-gesture-handler";
+import React, { useState } from "react";
+import {
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  Alert,
+  ImageBackground,
+} from "react-native";
+import { TextInputMask } from "react-native-masked-text";
+import styles from "./styles";
 
 const RegisterScreen = ({ navigation }) => {
-
-  const [dataNasc, setDataNasc] = useState()
-  const [phoneNumber, setPhoneNumber] = useState()
-
+  const [dataNasc, setDataNasc] = useState();
+  const [phoneNumber, setPhoneNumber] = useState();
 
   return (
     <View style={styles.container}>
-      
+     
       <ImageBackground
-        source={require('../../../src/image/background_login.png')}
-        style={[styles.background, styles.container]}>
-
-        <View style={styles.loginFieldsContainer}>
-
-          <Image
-            source={require('../../../src/image/logo.png')}
-            style={styles.logo}
-          />
-
+        source={require("../../../src/image/background_login.png")}
+        style={[styles.background, styles.container]}
+      >
+        <View style={styles.registerFieldsContainer}>
           <TextInput
             style={styles.input}
             placeholder="Informe seu nome completo"
@@ -32,31 +32,28 @@ const RegisterScreen = ({ navigation }) => {
           <TextInputMask
             style={styles.input}
             placeholder="Data de nascimento"
-            type={'datetime'}
+            type={"datetime"}
             options={{
-              format: 'DD/MM/YYYY'
+              format: "DD/MM/YYYY",
             }}
             value={dataNasc}
-            onChangeText={text => setDataNasc(text)}
+            onChangeText={(text) => setDataNasc(text)}
           />
 
           <TextInputMask
             style={styles.input}
             placeholder="Celular"
-            type={'cel-phone'}
+            type={"cel-phone"}
             options={{
-              maskType: 'BRL',
+              maskType: "BRL",
               withDDD: true,
-              dddMask: '(99) '
+              dddMask: "(99) ",
             }}
             value={phoneNumber}
-            onChangeText={text => setPhoneNumber(text)}
+            onChangeText={(text) => setPhoneNumber(text)}
           />
 
-          <TextInput
-            style={styles.input}
-            placeholder="Informe seu e-mail"
-          />
+          <TextInput style={styles.input} placeholder="Informe seu e-mail" />
 
           <TextInput
             style={styles.input}
@@ -71,29 +68,25 @@ const RegisterScreen = ({ navigation }) => {
           />
 
           <TouchableOpacity
-            style={styles.button} onPress={() => {
-              console.info('Conta criada com sucesso');
-            }}>
+            style={styles.button}
+            onPress={() => {
+              console.info("Conta criada com sucesso");
+            }}
+          >
             <Text style={styles.buttonText}>Criar Conta</Text>
           </TouchableOpacity>
 
-          <Text style={styles.bottomText}>Já possui conta?{' '}
-            <TouchableOpacity>
-
-
-              <Text
-                style={styles.bottomTextClickable}
-                onPress={() => {
-                  navigation.pop()
-                }}
-              >Entre</Text>
-            </TouchableOpacity>
-          </Text>
+          <TouchableOpacity
+            style={[styles.button, { backgroundColor: "#800000ff", marginBottom: 25 }]}
+            onPress={() => {
+              console.info("Conta criada com sucesso");
+            }}
+          >
+            <Text style={styles.buttonText}>Já possui conta? Entrar</Text>
+          </TouchableOpacity>
 
         </View>
-
       </ImageBackground>
-
     </View>
   );
 };
