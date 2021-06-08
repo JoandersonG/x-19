@@ -5,6 +5,33 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
   },
+  
+  topbar: {
+    width: '100%',
+    height: 60,
+    flexDirection: 'row',
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  topbarText: {
+    fontSize: 20,
+    fontWeight: '600',
+    alignSelf: 'center'
+  },
+
+  backButton: {
+    position: "absolute", 
+    top: 15,
+    start: 20,
+  },
+
+  backButtonText: {
+    fontWeight: '600',
+    fontSize: 20,
+  },
+
 
   dadosView: {
     backgroundColor: "#800000ff",

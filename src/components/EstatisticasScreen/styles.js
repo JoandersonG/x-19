@@ -7,6 +7,32 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
   },
 
+  topbar: {
+    width: '110%',
+    height: 60,
+    flexDirection: 'row',
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  topbarText: {
+    fontSize: 20,
+    fontWeight: '600',
+    alignSelf: 'center'
+  },
+
+  backButton: {
+    position: "absolute", 
+    top: 15,
+    start: 30,
+  },
+
+  backButtonText: {
+    fontWeight: '600',
+    fontSize: 20,
+  },
+
   tituloGrafico: {
     fontSize: 20,
     marginTop: 15,
@@ -21,7 +47,7 @@ const styles = StyleSheet.create({
   dadosView: {
     backgroundColor: "#800000ff",
     width: "90%",
-    position: "absolute", //Here is the trick
+    position: "absolute",
     bottom: 20,
     flexDirection: 'row',
     padding: 15,
@@ -44,7 +70,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     resizeMode: "cover",
-    position: "absolute", //not push other components underneath it
+    position: "absolute",
   },
 });
 

@@ -1,4 +1,3 @@
-//import liraries
 import { createAppContainer } from "react-navigation";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { createStackNavigator } from "react-navigation-stack";
@@ -11,20 +10,15 @@ import Estatisticas from "./src/components/EstatisticasScreen"
 
 const MainDrawer = createDrawerNavigator(
   {
+    'Denunciar Aglomeração': Home,
+    'Mapa de Aglomeração': MapaAglomeracao,
     'Estatísticas': {
       screen: Estatisticas,
-      options: { title: "Not Home" }
     },
-    'Mapa de Aglomeração': MapaAglomeracao,
-    'Denunciar Aglomeração': Home,
   },
   {
-    //Prop
     contentOptions: {
-      //Sempre que a aba estiver ativa, manter essa cor
-      activeTintColor: `#80ccc0`,
-      //Prop
-      //Permite aumentar a fonte
+      activeTintColor: `#800000ff`,
       labelStyle: {
         fontSize: 18,
       },

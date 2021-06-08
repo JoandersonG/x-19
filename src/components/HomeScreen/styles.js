@@ -5,12 +5,29 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
   },
+  
+  topbar: {
+    width: '110%',
+    height: 60,
+    flexDirection: 'row',
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  topbarText: {
+    fontSize: 20,
+    fontWeight: '600',
+    alignSelf: 'center'
+  },
 
   dadosView: {
     backgroundColor: "white",
     width: "90%",
-    position: "absolute", //Here is the trick
+    position: "absolute",
     bottom: 0,
+    borderColor: '#800000ff',
+    borderWidth: 1
   },
 
      
@@ -38,7 +55,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     resizeMode: "cover",
-    position: "absolute", //not push other components underneath it
+    position: "absolute",
   },
 
   button: {

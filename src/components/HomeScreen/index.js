@@ -20,6 +20,9 @@ const HomeScreen = ({ navigation }) => {
         source={require("../../../src/image/maps_example.png")}
         style={[styles.background, styles.container]}
       >
+        <View style={styles.topbar}>
+          <Text style={styles.topbarText}>Denunciar Aglomeração</Text>
+        </View>
         <View style={styles.dadosView}>
           <Text style={styles.section}>Endereço</Text>
           <TextInput
